@@ -1,0 +1,32 @@
+{
+  "name": "@azu/mono-one",
+  "version": "1.6.2",
+  "description": "",
+  "homepage": "https://github.com/azu/monorepo-release-changesets/tree/master/packages/mono-one/",
+  "bugs": {
+    "url": "https://github.com/azu/monorepo-release-changesets/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azu/monorepo-release-changesets.git",
+    "directory": "packages/mono-one"
+  },
+  "license": "MIT",
+  "author": "azu",
+  "files": [
+    "bin/",
+    "lib/",
+    "src/"
+  ],
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo OK"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
