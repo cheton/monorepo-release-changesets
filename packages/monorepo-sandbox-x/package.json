@@ -1,15 +1,15 @@
 {
-  "name": "@cheton/mono-two",
-  "version": "1.0.0",
+  "name": "@cheton/monorepo-sandbox-x",
+  "version": "0.1.0",
   "description": "",
-  "homepage": "https://github.com/cheton/monorepo-release-changesets/tree/master/packages/mono-two/",
+  "homepage": "https://github.com/cheton/monorepo-release-changesets/tree/master/packages/monorepo-sandbox-x/",
   "bugs": {
     "url": "https://github.com/cheton/monorepo-release-changesets/issues"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/cheton/monorepo-release-changesets.git",
-    "directory": "packages/mono-two"
+    "directory": "packages/monorepo-sandbox-x"
   },
   "license": "MIT",
   "files": [
@@ -24,9 +24,6 @@
   },
   "scripts": {
     "test": "echo OK"
-  },
-  "dependencies": {
-    "@cheton/mono-one": "^1.0.0"
   },
   "publishConfig": {
     "access": "public"

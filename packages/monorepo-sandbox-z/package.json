@@ -1,15 +1,15 @@
 {
-  "name": "@cheton/mono-three",
-  "version": "1.0.0",
+  "name": "@cheton/monorepo-sandbox-z",
+  "version": "0.1.0",
   "description": "",
-  "homepage": "https://github.com/cheton/monorepo-release-changesets/tree/master/packages/mono-three/",
+  "homepage": "https://github.com/cheton/monorepo-release-changesets/tree/master/packages/monorepo-sandbox-z/",
   "bugs": {
     "url": "https://github.com/cheton/monorepo-release-changesets/issues"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/cheton/monorepo-release-changesets.git",
-    "directory": "packages/mono-three"
+    "directory": "packages/monorepo-sandbox-z"
   },
   "license": "MIT",
   "files": [
@@ -26,8 +26,8 @@
     "test": "echo OK"
   },
   "dependencies": {
-    "@cheton/mono-one": "^1.0.0",
-    "@cheton/mono-two": "^1.0.0"
+    "@cheton/monorepo-sandbox-x": "^0.1.0",
+    "@cheton/monorepo-sandbox-y": "^0.1.0"
   },
   "publishConfig": {
     "access": "public"

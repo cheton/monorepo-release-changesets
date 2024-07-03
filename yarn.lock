@@ -291,26 +291,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cheton/mono-one@^1.0.0, @cheton/mono-one@workspace:packages/mono-one":
+"@cheton/monorepo-sandbox-x@^0.1.0, @cheton/monorepo-sandbox-x@workspace:packages/monorepo-sandbox-x":
   version: 0.0.0-use.local
-  resolution: "@cheton/mono-one@workspace:packages/mono-one"
+  resolution: "@cheton/monorepo-sandbox-x@workspace:packages/monorepo-sandbox-x"
   languageName: unknown
   linkType: soft
 
-"@cheton/mono-three@workspace:packages/mono-three":
+"@cheton/monorepo-sandbox-y@^0.1.0, @cheton/monorepo-sandbox-y@workspace:packages/monorepo-sandbox-y":
   version: 0.0.0-use.local
-  resolution: "@cheton/mono-three@workspace:packages/mono-three"
+  resolution: "@cheton/monorepo-sandbox-y@workspace:packages/monorepo-sandbox-y"
   dependencies:
-    "@cheton/mono-one": ^1.0.0
-    "@cheton/mono-two": ^1.0.0
+    "@cheton/monorepo-sandbox-x": ^0.1.0
   languageName: unknown
   linkType: soft
 
-"@cheton/mono-two@^1.0.0, @cheton/mono-two@workspace:packages/mono-two":
+"@cheton/monorepo-sandbox-z@workspace:packages/monorepo-sandbox-z":
   version: 0.0.0-use.local
-  resolution: "@cheton/mono-two@workspace:packages/mono-two"
+  resolution: "@cheton/monorepo-sandbox-z@workspace:packages/monorepo-sandbox-z"
   dependencies:
-    "@cheton/mono-one": ^1.0.0
+    "@cheton/monorepo-sandbox-x": ^0.1.0
+    "@cheton/monorepo-sandbox-y": ^0.1.0
   languageName: unknown
   linkType: soft
 
