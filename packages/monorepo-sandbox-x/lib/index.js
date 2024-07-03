@@ -1,1 +1,7 @@
-module.exports = "mono-one";
+function add(x, y) {
+  return x + y;
+}
+
+module.exports = {
+  add: add,
+};
