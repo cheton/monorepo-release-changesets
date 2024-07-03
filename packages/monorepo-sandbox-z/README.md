@@ -1,4 +1,4 @@
-# @cheton/mono-three
+# @cheton/monorepo-sandbox-z
 
 deps +
 
