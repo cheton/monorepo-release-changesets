@@ -21,7 +21,7 @@
     "release-ci": "lerna publish from-package --y --no-verify-access"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.6.1",
+    "@changesets/cli": "^2.27.7",
     "lerna": "^8.1.5",
     "pr-to-changesets": "^1.0.1"
   },
