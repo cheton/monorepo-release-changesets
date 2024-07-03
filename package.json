@@ -1,23 +1,20 @@
 {
   "private": true,
-  "name": "root",
+  "name": "monorepo",
   "version": "1.0.0",
   "description": "A monorepo use yarn and changesets without lerna.",
-  "homepage": "https://github.com/azu/monorepo-release-changesets",
+  "homepage": "https://github.com/cheton/monorepo-release-changesets",
   "bugs": {
-    "url": "https://github.com/azu/monorepo-release-changesets/issues"
+    "url": "https://github.com/cheton/monorepo-release-changesets/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/azu/monorepo-release-changesets.git"
+    "url": "https://github.com/cheton/monorepo-release-changesets.git"
   },
   "license": "MIT",
-  "author": "azu",
-  "workspaces": {
-    "packages": [
-      "packages/*"
-    ]
-  },
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "test": "lerna run test",
     "add-changesets": "changeset add",
@@ -25,7 +22,8 @@
   },
   "devDependencies": {
     "@changesets/cli": "^2.6.1",
-    "lerna": "^3.20.2",
+    "lerna": "^8.1.5",
     "pr-to-changesets": "^1.0.1"
-  }
+  },
+  "packageManager": "yarn@3.2.4"
 }
