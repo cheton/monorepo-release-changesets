@@ -291,6 +291,12 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@cheton/monorepo-sandbox-docs@workspace:packages/monorepo-sandbox-docs":
+  version: 0.0.0-use.local
+  resolution: "@cheton/monorepo-sandbox-docs@workspace:packages/monorepo-sandbox-docs"
+  languageName: unknown
+  linkType: soft
+
 "@cheton/monorepo-sandbox-x@^0.1.0, @cheton/monorepo-sandbox-x@workspace:packages/monorepo-sandbox-x":
   version: 0.0.0-use.local
   resolution: "@cheton/monorepo-sandbox-x@workspace:packages/monorepo-sandbox-x"
