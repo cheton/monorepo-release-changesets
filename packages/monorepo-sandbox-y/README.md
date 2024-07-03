@@ -1,4 +1,4 @@
-# @cheton/mono-two
+# @cheton/monorepo-sandbox-y
 
 Deps
 
