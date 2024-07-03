@@ -1,4 +1,4 @@
-# @cheton/mono-two
+# @azu/mono-two
 
 Deps
 
@@ -8,7 +8,7 @@ Deps
 
 Install with [npm](https://www.npmjs.com/):
 
-    npm install @cheton/mono-two
+    npm install @azu/mono-two
 
 ## Usage
 
@@ -16,10 +16,31 @@ Install with [npm](https://www.npmjs.com/):
 
 ## Changelog
 
-See [Releases page](https://github.com/cheton/monorepo-release-changesets/releases).
+See [Releases page](https://github.com/azu/monorepo-release-changesets/releases).
 
 ## Running tests
 
 Install devDependencies and Run `npm test`:
 
     npm test
+
+## Contributing
+
+Pull requests and stars are always welcome.
+
+For bugs and feature requests, [please create an issue](https://github.com/azu/monorepo-release-changesets/issues).
+
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request :D
+
+## Author
+
+- [github/azu](https://github.com/azu)
+- [twitter/azu_re](https://twitter.com/azu_re)
+
+## License
+
+MIT © azu

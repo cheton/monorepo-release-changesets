@@ -1,1 +1,1 @@
-module.exports = "mono-two";
+module.exports = "two";

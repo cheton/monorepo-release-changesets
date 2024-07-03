@@ -1,17 +1,18 @@
 {
-  "name": "@cheton/mono-two",
-  "version": "1.0.0",
+  "name": "@azu/mono-two",
+  "version": "1.6.1",
   "description": "",
-  "homepage": "https://github.com/cheton/monorepo-release-changesets/tree/master/packages/mono-two/",
+  "homepage": "https://github.com/azu/monorepo-release-changesets/tree/master/packages/mono-two/",
   "bugs": {
-    "url": "https://github.com/cheton/monorepo-release-changesets/issues"
+    "url": "https://github.com/azu/monorepo-release-changesets/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cheton/monorepo-release-changesets.git",
+    "url": "https://github.com/azu/monorepo-release-changesets.git",
     "directory": "packages/mono-two"
   },
   "license": "MIT",
+  "author": "azu",
   "files": [
     "bin/",
     "lib/",
@@ -26,7 +27,7 @@
     "test": "echo OK"
   },
   "dependencies": {
-    "@cheton/mono-one": "^1.0.0"
+    "@azu/mono-one": "^1.6.2"
   },
   "publishConfig": {
     "access": "public"
