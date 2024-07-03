@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "name": "@cheton/monorepo-sandbox-docs",
+  "description": "",
+  "homepage": "https://github.com/cheton/monorepo-release-changesets/tree/master/packages/monorepo-sandbox-docs/",
+  "bugs": {
+    "url": "https://github.com/cheton/monorepo-release-changesets/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cheton/monorepo-release-changesets.git",
+    "directory": "packages/monorepo-sandbox-docs"
+  },
+  "license": "MIT",
+  "scripts": {
+    "test": "echo OK"
+  }
+}
