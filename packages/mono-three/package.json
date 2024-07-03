@@ -1,18 +1,17 @@
 {
-  "name": "@azu/mono-three",
-  "version": "1.6.0",
+  "name": "@cheton/mono-three",
+  "version": "1.0.0",
   "description": "",
-  "homepage": "https://github.com/azu/monorepo-release-changesets/tree/master/packages/mono-three/",
+  "homepage": "https://github.com/cheton/monorepo-release-changesets/tree/master/packages/mono-three/",
   "bugs": {
-    "url": "https://github.com/azu/monorepo-release-changesets/issues"
+    "url": "https://github.com/cheton/monorepo-release-changesets/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/azu/monorepo-release-changesets.git",
+    "url": "https://github.com/cheton/monorepo-release-changesets.git",
     "directory": "packages/mono-three"
   },
   "license": "MIT",
-  "author": "azu",
   "files": [
     "bin/",
     "lib/",
@@ -27,8 +26,8 @@
     "test": "echo OK"
   },
   "dependencies": {
-    "@azu/mono-one": "^1.6.0",
-    "@azu/mono-two": "^1.6.0"
+    "@cheton/mono-one": "^1.0.0",
+    "@cheton/mono-two": "^1.0.0"
   },
   "publishConfig": {
     "access": "public"
