@@ -168,16 +168,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@changesets/get-github-info@npm:^0.6.0":
-  version: 0.6.0
-  resolution: "@changesets/get-github-info@npm:0.6.0"
-  dependencies:
-    dataloader: ^1.4.0
-    node-fetch: ^2.5.0
-  checksum: 753173bda536aa79cb0502f59ce13889b23ae8463d04893d43ff22966818060837d9db4052b6cbfbd95dfb242fbfd38890a38c56832948e83bf358a47812b708
-  languageName: node
-  linkType: hard
-
 "@changesets/get-release-plan@npm:^4.0.3":
   version: 4.0.3
   resolution: "@changesets/get-release-plan@npm:4.0.3"
@@ -300,6 +290,12 @@ __metadata:
   checksum: 6df0447e05ededbab71f36e6ad23aa77cf06eb6adda7a8b8e7fb9d6bd5bc93acceb916d55b2a37cb7e93fb05d39a236a0dd7ade5243aae4772885081101d4784
   languageName: node
   linkType: hard
+
+"@cheton/changelog-github@workspace:*, @cheton/changelog-github@workspace:packages/changelog-github":
+  version: 0.0.0-use.local
+  resolution: "@cheton/changelog-github@workspace:packages/changelog-github"
+  languageName: unknown
+  linkType: soft
 
 "@cheton/monorepo-sandbox-docs@workspace:packages/monorepo-sandbox-docs":
   version: 0.0.0-use.local
@@ -1837,13 +1833,6 @@ __metadata:
   version: 7.0.0
   resolution: "dargs@npm:7.0.0"
   checksum: b8f1e3cba59c42e1f13a114ad4848c3fc1cf7470f633ee9e9f1043762429bc97d91ae31b826fb135eefde203a3fdb20deb0c0a0222ac29d937b8046085d668d1
-  languageName: node
-  linkType: hard
-
-"dataloader@npm:^1.4.0":
-  version: 1.4.0
-  resolution: "dataloader@npm:1.4.0"
-  checksum: e2c93d43afde68980efc0cd9ff48e9851116e27a9687f863e02b56d46f7e7868cc762cd6dcbaf4197e1ca850a03651510c165c2ae24b8e9843fd894002ad0e20
   languageName: node
   linkType: hard
 
@@ -3751,7 +3740,7 @@ __metadata:
   resolution: "monorepo@workspace:."
   dependencies:
     "@changesets/cli": ^2.27.7
-    "@changesets/get-github-info": ^0.6.0
+    "@cheton/changelog-github": "workspace:*"
     lerna: ^8.1.5
   languageName: unknown
   linkType: soft
@@ -3825,7 +3814,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-fetch@npm:^2.5.0, node-fetch@npm:^2.6.7":
+"node-fetch@npm:^2.6.7":
   version: 2.7.0
   resolution: "node-fetch@npm:2.7.0"
   dependencies:

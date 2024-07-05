@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.7",
-    "@changesets/get-github-info": "^0.6.0",
+    "@cheton/changelog-github": "workspace:*",
     "lerna": "^8.1.5"
   },
   "packageManager": "yarn@3.2.4"

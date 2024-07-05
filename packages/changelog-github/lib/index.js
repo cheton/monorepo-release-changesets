@@ -126,7 +126,6 @@ const getReleaseLine = async (changeset, type, options) => {
 
   const prefix = '';
   const suffix = `${byUsers}${linkPullOrCommit}`;
-  const extraTextr = 
 
   let returnValue = `\n\n- ${prefix}${firstLine}${suffix}`;
 

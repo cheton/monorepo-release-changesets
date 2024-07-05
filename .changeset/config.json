@@ -1,6 +1,6 @@
 {
   "$schema": "https://unpkg.com/@changesets/config@3.0.2/schema.json",
-  "changelog": ["./changelog-github.js", { "repo": "cheton/monorepo-release-changesets" }],
+  "changelog": ["@cheton/changelog-github", { "repo": "cheton/monorepo-release-changesets" }],
   "commit": false,
   "fixed": [],
   "linked": [],
