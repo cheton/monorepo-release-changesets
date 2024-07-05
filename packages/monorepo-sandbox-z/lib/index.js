@@ -1,4 +1,4 @@
-const { add } = require('@cheton/monorepo-sandbox-x');
+const { add, subtract } = require('@cheton/monorepo-sandbox-x');
 const { multiply } = require('@cheton/monorepo-sandbox-y');
 
 const divide = (x, y) => {
@@ -7,6 +7,7 @@ const divide = (x, y) => {
 
 module.exports = {
   add,
+  subtract,
   multiply,
   divide,
 };
