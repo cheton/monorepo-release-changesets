@@ -39,7 +39,7 @@ const getDependencyReleaseLine = async (changesets, dependenciesUpdated, options
       }
       return null;
     })
-  ).filter(Boolean);
+  );
 
   const changesetLink = `- Updated dependencies [${changesetCommits.join(', ')}]`;
   const updatedDependenciesList = dependenciesUpdated.map(
