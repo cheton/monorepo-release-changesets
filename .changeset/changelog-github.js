@@ -61,9 +61,9 @@ const getReleaseLine = async (changeset, type, options) => {
   validate(options);
 
   const repo = options?.repo;
-  let prFromSummary; // number
-  let commitFromSummary; // string
-  let usersFromSummary = []; // array
+  let prFromSummary = 0;
+  let commitFromSummary = '';
+  const usersFromSummary = [];
 
   const replacedChangelog = changeset.summary
     .replace(/^\s*(?:pr|pull|pull\s+request):\s*#?(\d+)/im, (_, pr) => {
