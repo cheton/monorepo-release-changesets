@@ -33,11 +33,11 @@ const getDependencyReleaseLine = async (changesets, dependenciesUpdated, options
   const changesetCommits = await Promise.all(
     changesets.map(async (cs) => {
       if (cs.commit) {
-        const { links } = await getInfo({
+        const info = await getInfo({
           repo: repo,
           commit: cs.commit,
         });
-        return links.commit;
+        return info?.links?.commit;
       }
       return null;
     })
@@ -55,7 +55,7 @@ const getDependencyReleaseLine = async (changesets, dependenciesUpdated, options
 // ```
 // \n
 // \n
-// - feat: add something by @user in #123
+// - feat: enhance something by @user in #123
 // ```
 const getReleaseLine = async (changeset, type, options) => {
   validate(options);
@@ -123,11 +123,11 @@ const getReleaseLine = async (changeset, type, options) => {
     ? usersFromSummary.map((userFromSummary) => (
         `[@${userFromSummary}](https://github.com/${userFromSummary})`
       )).join(' ,')
-    : Array(links.user).filter(Boolean);
+    : [links.user].filter(Boolean);
 
   const byUsers = (users && users.length > 0) ? ` by ${users}` : '';
 
-  // only link PR or merge commit not both
+  // Only link PR or merge commit not both
   const linkPullOrCommit = (() => {
     if (links.pull) {
       return ` in ${links.pull}`;
@@ -138,9 +138,10 @@ const getReleaseLine = async (changeset, type, options) => {
     return '';
   })();
 
+  const prefix = '';
   const suffix = `${byUsers}${linkPullOrCommit}`;
 
-  return `\n\n- ${firstLine}${suffix}\n${futureLines.map((l) => `  ${l}`).join('\n')}`;
+  return `\n\n- ${prefix}${firstLine}${suffix}\n${futureLines.map((l) => `  ${l}`).join('\n')}`;
 };
 
 const changelogFunctions = {
