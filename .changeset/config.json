@@ -1,10 +1,6 @@
 {
   "$schema": "https://unpkg.com/@changesets/config@3.0.2/schema.json",
-<<<<<<< Updated upstream
-  "changelog": "@changesets/cli/changelog",
-=======
   "changelog": ["@svitejs/changesets-changelog-github-compact", { "repo": "cheton/monorepo-release-changesets" }],
->>>>>>> Stashed changes
   "commit": false,
   "fixed": [],
   "linked": [],
