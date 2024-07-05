@@ -2,7 +2,6 @@
  * @see https://github.com/changesets/changesets/blob/main/docs/modifying-changelog-format.md
  */
 
-import { ChangelogFunctions } from '@changesets/types';
 import { getInfo, getInfoFromPullRequest } from '@changesets/get-github-info';
 
 const CHANGELOG_PACKAGE_SCOPE = 'tonic-ui';
