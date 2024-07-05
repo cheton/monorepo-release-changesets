@@ -14,12 +14,6 @@ const validate = (options) => {
 	}
 };
 
-// Example:
-// ```
-// - Updated dependencies [<commit>]:
-//   - @scope/package-1@x.y.z
-//   - @scope/package-2@x.y.z
-// ```
 const getDependencyReleaseLine = async (changesets, dependenciesUpdated, options) => {
   validate(options);
 
@@ -49,12 +43,6 @@ const getDependencyReleaseLine = async (changesets, dependenciesUpdated, options
   return [changesetLink, ...updatedDependenciesList].join('\n');
 };
 
-// Example:
-// ```
-// \n
-// \n
-// - feat: enhance something by @user in #123
-// ```
 const getReleaseLine = async (changeset, type, options) => {
   validate(options);
 
@@ -138,8 +126,15 @@ const getReleaseLine = async (changeset, type, options) => {
 
   const prefix = '';
   const suffix = `${byUsers}${linkPullOrCommit}`;
+  const extraTextr = 
 
-  return `\n\n- ${prefix}${firstLine}${suffix}\n${futureLines.map((l) => `  ${l}`).join('\n')}`;
+  let returnValue = `\n\n- ${prefix}${firstLine}${suffix}`;
+
+  if (futureLines.length > 0) {
+    returnValue += `\n${futureLines.filter(Boolean).map(l => `  ${l}`).join('\n')}`;
+  }
+
+  return returnValue;
 };
 
 const changelogFunctions = {
