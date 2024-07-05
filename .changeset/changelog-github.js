@@ -51,6 +51,12 @@ const getDependencyReleaseLine = async (changesets, dependenciesUpdated, options
   return [changesetLink, ...updatedDepenenciesList].join('\n');
 };
 
+// Example:
+// ```
+// \n
+// \n
+// - feat: add something by @user in #123
+// ```
 const getReleaseLine = async (changeset, type, options) => {
   validate(options);
 
