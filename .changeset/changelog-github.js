@@ -14,7 +14,7 @@ const validate = (options) => {
       `Please provide a repo to this changelog generator like this:\n"changelog": ["@${CHANGELOG_PACKAGE_SCOPE}/${CHANGELOG_PACKAGE_NAME}", { "repo": "org/repo" }]`
 		);
 	}
-}
+};
 
 // Example:
 // ```
@@ -44,11 +44,11 @@ const getDependencyReleaseLine = async (changesets, dependenciesUpdated, options
   ).filter(Boolean);
 
   const changesetLink = `- Updated dependencies [${changesetCommits.join(', ')}]`;
-  const updatedDepenenciesList = dependenciesUpdated.map(
+  const updatedDependenciesList = dependenciesUpdated.map(
     (dependency) => `  - ${dependency.name}@${dependency.newVersion}`
   );
 
-  return [changesetLink, ...updatedDepenenciesList].join('\n');
+  return [changesetLink, ...updatedDependenciesList].join('\n');
 };
 
 // Example:
@@ -124,16 +124,18 @@ const getReleaseLine = async (changeset, type, options) => {
       )).join(' ,')
     : Array(links.user).filter(Boolean);
 
-  const prefix = [
-    users === null ? '' : ` by ${users}`,
-    links.pull === null ? '' : ` in ${links.pull}`,
-    links.commit === null ? '' : ` ${links.commit}`,
-  ].join('');
-
   const byUsers = (users && users.length > 0) ? '' : ` by ${users}`;
 
   // only link PR or merge commit not both
-  const linkPullOrCommit = links.pull ? ` in ${links.pull}` : links.commit ? ` in ${links.commit}` : '';
+  const linkPullOrCommit = (() => {
+    if (links.pull) {
+      return ` in ${links.pull}`;
+    }
+    if (links.commit) {
+      return ` in ${links.commit}`;
+    }
+    return '';
+  })();
 
   const suffix = `${byUser}${linkPullOrCommit}`;
 
