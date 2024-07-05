@@ -92,10 +92,10 @@ const getReleaseLine = async (changeset, type, options) => {
         repo: repo,
         pull: prFromSummary,
       });
-      let links = pullRequestInfo.links;
+      const links = pullRequestInfo.links;
       if (commitFromSummary) {
         const shortCommitId = commitFromSummary.slice(0, 7);
-        links = {
+        return {
           ...links,
           commit: `[\`${shortCommitId}\`](https://github.com/${repo}/commit/${commitFromSummary})`,
         };
@@ -120,12 +120,12 @@ const getReleaseLine = async (changeset, type, options) => {
   })();
 
   const users = usersFromSummary.length > 0
-    ? usersFromSummary.map((userFromSummary) => (
-        `[@${userFromSummary}](https://github.com/${userFromSummary})`
-      )).join(' ,')
-    : [links.user].filter(Boolean);
+    ? usersFromSummary.map((userFromSummary) => {
+        return `[@${userFromSummary}](https://github.com/${userFromSummary})`;
+      })
+    : links.user ? [links.user] : [];
 
-  const byUsers = (users && users.length > 0) ? ` by ${users}` : '';
+  const byUsers = (users && users.length > 0) ? ` by ${users.join(', ')}` : '';
 
   // Only link PR or merge commit not both
   const linkPullOrCommit = (() => {
