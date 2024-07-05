@@ -5,8 +5,15 @@ on:
     branches:
     - master
 
+permissions: {}
+
 jobs:
   publish:
+    if: github.repository == 'cheton/monorepo-release-changesets'
+    permissions:
+      contents: write       # to create release (changesets/action)
+      issues: write         # to post issue comments (changesets/action)
+      pull-requests: write  # to create pull request (changesets/action)
     name: Publish or Create Pull Request
     runs-on: ubuntu-latest
     steps:
@@ -19,10 +26,13 @@ jobs:
       - name: Install Dependencies
         run: yarn install
       - name: Create Release Pull Request or Publish to npm
+        id: changesets
         uses: changesets/action@master
         with:
-          publish: npm run release-ci
+          title: "chore(release): version packages"
+          commit: "chore(release): version packages [skip ci]"
+          publish: yarn release-ci
+          version: yarn changeset version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
