@@ -27,7 +27,7 @@ const getDependencyReleaseLine = async (changesets, dependenciesUpdated, options
 
   if (dependenciesUpdated.length === 0) {
     return '';
-  };
+  }
 
   const repo = options?.repo;
   const changesetCommits = await Promise.all(
@@ -88,10 +88,11 @@ const getReleaseLine = async (changeset, type, options) => {
 
   const links = await (async () => {
     if (prFromSummary > 0) {
-      const { links } = await getInfoFromPullRequest({
+      const pullRequestInfo = await getInfoFromPullRequest({
         repo: repo,
         pull: prFromSummary,
       });
+      let links = pullRequestInfo.links;
       if (commitFromSummary) {
         const shortCommitId = commitFromSummary.slice(0, 7);
         links = {
@@ -104,11 +105,11 @@ const getReleaseLine = async (changeset, type, options) => {
 
     const commitToFetchFrom = commitFromSummary || changeset.commit;
     if (commitToFetchFrom) {
-      const { links } = await getInfo({
+      const info = await getInfo({
         repo: repo,
         commit: commitToFetchFrom,
       });
-      return links;
+      return info.links;
     }
 
     return {
@@ -124,7 +125,7 @@ const getReleaseLine = async (changeset, type, options) => {
       )).join(' ,')
     : Array(links.user).filter(Boolean);
 
-  const byUsers = (users && users.length > 0) ? '' : ` by ${users}`;
+  const byUsers = (users && users.length > 0) ? ` by ${users}` : '';
 
   // only link PR or merge commit not both
   const linkPullOrCommit = (() => {
@@ -137,7 +138,7 @@ const getReleaseLine = async (changeset, type, options) => {
     return '';
   })();
 
-  const suffix = `${byUser}${linkPullOrCommit}`;
+  const suffix = `${byUsers}${linkPullOrCommit}`;
 
   return `\n\n- ${firstLine}${suffix}\n${futureLines.map((l) => `  ${l}`).join('\n')}`;
 };
